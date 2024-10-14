@@ -1,0 +1,132 @@
+/* Basic container styling */
+.product-manager-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+h2, h3 {
+    text-align: center;
+    color: #333;
+}
+
+/* Form styling */
+.product-form {
+    display: flex;
+    flex-direction: column; /* Stack the form elements vertically */
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    width: 50%; /* Adjust width as needed */
+    margin: 0 auto; /* Center the form horizontally */
+}
+
+.product-form div {
+    width: 100%;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: space-between; /* Space between label and input */
+}
+
+.product-form label {
+    font-weight: bold;
+    margin-right: 10px;
+    flex: 1;
+}
+
+.product-form input, .product-form select {
+    padding: 10px;
+    width: 100%;
+    max-width: 400px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    flex: 2;
+}
+
+.product-form button {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.product-form button:hover {
+    background-color: #218838;
+}
+
+/* Table styling */
+.product-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    text-align: center; /* Center table text */
+}
+
+.product-table th, .product-table td {
+    padding: 12px;
+    border: 1px solid #ddd;
+}
+
+.product-table th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+.product-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.product-table tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+.product-table button {
+    padding: 6px 12px;
+    font-size: 14px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.product-table .edit-button {
+    background-color: #007bff;
+    color: white;
+    margin-right: 5px;
+}
+
+.product-table .edit-button:hover {
+    background-color: #0069d9;
+}
+
+.product-table .delete-button {
+    background-color: #dc3545;
+    color: white;
+}
+
+.product-table .delete-button:hover {
+    background-color: #c82333;
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+    .product-form input, .product-form select {
+        width: 100%;
+    }
+
+    .product-table {
+        font-size: 14px;
+    }
+
+    .product-table th, .product-table td {
+        padding: 8px;
+    }
+}
