@@ -18,7 +18,7 @@ const ProductManager = () => {
     // Fetch all products
     const fetchProducts = async () => {
         try {
-            const response = await axios.get('http://localhost:5000/api/products');
+            const response = await axios.get('https://dashboard-backend-r5t2.onrender.com/api/products');
             setProducts(response.data);
 			console.log(products)
         } catch (error) {
@@ -41,7 +41,7 @@ const ProductManager = () => {
         if (editingProduct) {
             // Update product
             try {
-                await axios.put(`http://localhost:5000/api/products/update/${editingProduct._id}`, productData);
+                await axios.put(`https://dashboard-backend-r5t2.onrender.com/api/products/update/${editingProduct._id}`, productData);
                 alert('Product updated successfully!');
             } catch (error) {
                 console.error('Error updating product:', error);
@@ -49,7 +49,7 @@ const ProductManager = () => {
         } else {
             // Create new product
             try {
-                await axios.post('http://localhost:5000/api/products/create', productData);
+                await axios.post('https://dashboard-backend-r5t2.onrender.com/api/products/create', productData);
                 alert('Product created successfully!');
             } catch (error) {
                 console.error('Error creating product:', error);
@@ -71,7 +71,7 @@ const ProductManager = () => {
     // Handle product deletion
     const handleDelete = async (id) => {
         try {
-            await axios.delete(`http://localhost:5000/api/products/delete/${id}`);
+            await axios.delete(`https://dashboard-backend-r5t2.onrender.com/api/products/delete/${id}`);
             alert('Product deleted successfully!');
             fetchProducts(); // Refresh the product list
         } catch (error) {

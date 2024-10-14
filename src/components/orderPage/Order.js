@@ -9,7 +9,7 @@ const Order = () => {
         // Fetch orders from the API
         const fetchOrders = async () => {
             try {
-                const res = await axios.get('http://localhost:5000/api/orders');
+                const res = await axios.get('https://dashboard-backend-r5t2.onrender.com/api/orders');
                 setOrders(res.data);
             } catch (error) {
                 console.error('Error fetching orders:', error);

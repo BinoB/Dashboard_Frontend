@@ -25,7 +25,7 @@ const CreateOrder = () => {
     e.preventDefault();
     try {
       const response = await axios.post(
-        "http://localhost:5000/api/orders",
+        "https://dashboard-backend-r5t2.onrender.com/api/orders",
         orderData
       );
       console.log("Order created:", response.data);
